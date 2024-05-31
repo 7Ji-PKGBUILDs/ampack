@@ -3,7 +3,7 @@
 _pkgbase=ampack
 _srcname="${_pkgbase}"
 pkgname=${_pkgbase}-git
-pkgver=0.1.0
+pkgver=0.1.0.r2.4ce9a91
 pkgrel=1
 pkgdesc="A tool to unpack / (re)pack AMLogic burning images "
 arch=('x86_64' 'aarch64')
@@ -37,6 +37,5 @@ build() {
 }
 
 package() {
-  depends_aarch64=('arb')
   install -Dm755 "${_srcname}/target/release/${_pkgbase}" -t "${pkgdir}"/usr/bin/
 }
