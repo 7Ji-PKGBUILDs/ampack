@@ -10,7 +10,6 @@ arch=('x86_64' 'aarch64')
 url="https://github.com/7Ji/${_srcname}"
 license=('AGPL-3.0-or-later')
 depends=('gcc-libs' 'glibc')
-depends_aarch64=('arb')
 makedepends=('cargo')
 conflicts=("${_pkgbase}")
 provides=("${_pkgbase}=${pkgver}")
@@ -38,5 +37,6 @@ build() {
 }
 
 package() {
+  depends_aarch64=('arb')
   install -Dm755 "${_srcname}/target/release/${_pkgbase}" -t "${pkgdir}"/usr/bin/
 }
