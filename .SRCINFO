@@ -13,5 +13,6 @@ pkgbase = ampack-git
 	conflicts = ampack
 	source = git+https://github.com/7Ji/ampack.git
 	sha256sums = SKIP
+	makedepends_aarch64 = arb
 
 pkgname = ampack-git
