@@ -10,7 +10,7 @@ arch=('x86_64' 'aarch64')
 url="https://github.com/7Ji/${_srcname}"
 license=('AGPL-3.0-or-later')
 depends=('gcc-libs' 'glibc')
-makedepends_aarch64=('arb')
+depends_aarch64=('arb')
 makedepends=('cargo')
 conflicts=("${_pkgbase}")
 provides=("${_pkgbase}=${pkgver}")
