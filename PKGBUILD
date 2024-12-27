@@ -3,7 +3,7 @@
 _pkgbase=ampack
 _srcname="${_pkgbase}"
 pkgname=${_pkgbase}-git
-pkgver=0.1.0.r2.4ce9a91
+pkgver=0.1.0.r6.4606606
 pkgrel=1
 pkgdesc="A tool to unpack / (re)pack AMLogic burning images "
 arch=('x86_64' 'aarch64')
@@ -22,7 +22,8 @@ sha256sums=(
 prepare() {
   cd "${_srcname}"
   export RUSTUP_TOOLCHAIN=stable
-  cargo fetch --target "$(rustc -vV | sed -n 's/host: //p')"
+  cargo update
+  cargo fetch --locked --target "$(rustc -vV | sed -n 's/host: //p')"
 }
 
 pkgver() {

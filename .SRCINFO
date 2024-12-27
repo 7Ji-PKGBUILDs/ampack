@@ -1,6 +1,6 @@
 pkgbase = ampack-git
-	pkgdesc = A tool to unpack / (re)pack AMLogic burning images
-	pkgver = 0.1.0.r2.4ce9a91
+	pkgdesc = A tool to unpack / (re)pack AMLogic burning images 
+	pkgver = 0.1.0.r6.4606606
 	pkgrel = 1
 	url = https://github.com/7Ji/ampack
 	arch = x86_64
@@ -9,9 +9,9 @@ pkgbase = ampack-git
 	makedepends = cargo
 	depends = gcc-libs
 	depends = glibc
-	provides = ampack=0.1.0.r2.4ce9a91
+	provides = ampack=0.1.0.r6.4606606
 	conflicts = ampack
-	source = ampack::git+https://github.com/7Ji/ampack.git
+	source = git+https://github.com/7Ji/ampack.git
 	sha256sums = SKIP
 
 pkgname = ampack-git
